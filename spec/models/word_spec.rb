@@ -11,11 +11,13 @@ describe Word do
     end
 
     it "does not allow non-letters in words" do
-      expect(Word.new(:word => "hi!!!!")).to_not be_valid
+      expect(Word.new(:word => "hi!!!! 228")).to_not be_valid
     end
   end
 
   describe '#compute_score' do
-    it "scores hello as 8"
+    it "scores hello as 8" do
+      expect(Word.new(:word => "hello").compute_score).to eq 8
+    end
   end
 end

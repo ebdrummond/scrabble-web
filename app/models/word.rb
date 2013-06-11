@@ -8,4 +8,9 @@ class Word < ActiveRecord::Base
      "K"=>5, "L"=>1, "M"=>3, "N"=>1, "O"=>1, "P"=>3, "Q"=>10, "R"=>1, "S"=>1, "T"=>1,
      "U"=>1, "V"=>4, "W"=>4, "X"=>8, "Y"=>4, "Z"=>10}
   end
+
+  def compute_score
+    self.word.split("")
+
+  end
 end
