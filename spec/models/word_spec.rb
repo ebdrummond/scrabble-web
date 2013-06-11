@@ -10,7 +10,9 @@ describe Word do
       expect(Word.new).to_not be_valid
     end
 
-    it "does not allow non-letters in words"
+    it "does not allow non-letters in words" do
+      expect(Word.new(:word => "hi!!!!")).to_not be_valid
+    end
   end
 
   describe '#compute_score' do
