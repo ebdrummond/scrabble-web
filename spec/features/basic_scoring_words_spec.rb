@@ -9,7 +9,7 @@ describe "the basic scoring of a word" do
       expect(current_path).to eq '/words'
       within('#last_word') do
         within('#word') do
-          expect(page).to have_content('hello')  
+          expect(page).to have_content('hello')
         end
         within('#score') do
           expect(page).to have_content('8')
@@ -59,6 +59,6 @@ describe "the basic scoring of a word" do
         end
       end
     end
-  
+
   end
 end
